@@ -76,11 +76,7 @@ def resource_conflict(error):
     message = str(error)
     app.logger.warning(message)
     return (
-        jsonify(
-            status=status.HTTP_409_CONFLICT,
-            error="Conflict",
-            message=message,
-        ),
+        jsonify(status=status.HTTP_409_CONFLICT, error="Conflict", message=message,),
         status.HTTP_409_CONFLICT,
     )
 
